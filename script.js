@@ -1,27 +1,67 @@
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+// Smooth scroll for navbar links
 
-<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-(function(){
-emailjs.init("P-o9t5qlEaUxhErqV");
-})();
-
-document.querySelector(".contact-form").addEventListener("submit", function(e){
+anchor.addEventListener("click", function(e){
 
 e.preventDefault();
 
-emailjs.send("service_0pfct48","template_a9tf3gj",{
-name:this.querySelector("input[type='text']").value,
-email:this.querySelector("input[type='email']").value,
-message:this.querySelector("textarea").value
-})
-
-.then(function(){
-alert("Message Sent Successfully!");
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
 });
-
-this.reset();
 
 });
 
-</script>
+});
+
+
+// Navbar background change on scroll
+
+window.addEventListener("scroll", function(){
+
+let navbar = document.querySelector(".navbar");
+
+if(window.scrollY > 50){
+
+navbar.style.background = "#000";
+
+}
+
+else{
+
+navbar.style.background = "#111";
+
+}
+
+});
+
+
+// Simple welcome message
+
+window.onload = function(){
+
+console.log("Website Loaded Successfully");
+
+};
+
+
+
+// Contact button animation
+
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(btn => {
+
+btn.addEventListener("mouseover", () => {
+
+btn.style.transform = "scale(1.05)";
+
+});
+
+btn.addEventListener("mouseout", () => {
+
+btn.style.transform = "scale(1)";
+
+});
+
+});
