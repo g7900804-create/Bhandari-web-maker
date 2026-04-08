@@ -1,20 +1,220 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title> bhandari websites </title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhandari Web Maker</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+color:white;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+background-size:cover;
+background-position:center;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#111;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.hero button{
+padding:12px 25px;
+font-size:18px;
+background:#ff4b2b;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* SERVICES */
+
+.services{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:50px;
+}
+
+.card{
+background:white;
+color:black;
+width:250px;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0px 5px 15px rgba(0,0,0,0.3);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+padding:60px;
+background:#111;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+background:#ff4b2b;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* CONTACT FORM */
+
+.contact-form{
+max-width:400px;
+margin:30px auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border:none;
+border-radius:5px;
+font-size:16px;
+}
+
+.contact-form textarea{
+height:120px;
+resize:none;
+}
+
+.contact-form button{
+padding:12px;
+background:#ff4b2b;
+color:white;
+border:none;
+font-size:18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Bhandari web makers</h1>
-<p>Yaha pah bussnes related resturents related shops related website bnaye jate hai low to high price me</p>
+<div class="navbar">
+<h2>Bhandari Web Maker</h2>
 
-<button onclick="hello()">Click me</button>
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
 
-<script src="script.js"></script>
+</div>
 
+<div class="hero">
+
+<h1>Professional Website Development</h1>
+
+<p>I create websites for restaurants, cafes and businesses</p>
+
+<a href="#contact">
+<button>Contact Me</button>
+</a>
+
+</div>
+
+<div class="services" id="services">
+
+<div class="card">
+<h3>Restaurant Website</h3>
+<p>Modern website with menu, gallery and online presence.</p>
+</div>
+
+<div class="card">
+<h3>Cafe Website</h3>
+<p>Beautiful cafe websites to attract customers.</p>
+</div>
+
+<div class="card">
+<h3>Business Website</h3>
+<p>Professional websites for shops and services.</p>
+</div>
+
+</div>
+
+<div class="contact" id="contact">
+
+<h2>Contact Me</h2>
+
+<a href="tel:9876543210" class="btn">Call</a>
+
+<a href="https://wa.me/919876543210" class="btn">WhatsApp</a>
+
+<a href="mailto:example@gmail.com" class="btn">Email</a>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+<div class="footer">
+
+<p>© 2026 Bhandari Web Maker</p>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="email.js"></script>
 </body>
-
 </html>

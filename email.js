@@ -1,7 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-
 (function(){
 emailjs.init("P-o9t5qlEaUxhErqV");
 })();
@@ -23,5 +19,3 @@ alert("Message Sent Successfully!");
 this.reset();
 
 });
-
-</script>
