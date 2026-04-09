@@ -1,31 +1,26 @@
-document.addEventListener("DOMContentLoaded", function(){
-
 (function(){
 emailjs.init("P-o9t5qlEaUxhErqV");
 })();
 
-const form = document.querySelector(".contact-form");
-
-form.addEventListener("submit", function(e){
+document.querySelector(".contact-form").addEventListener("submit", function(e){
 
 e.preventDefault();
 
 emailjs.send("service_0pfct48","template_a9tf3gj",{
-name: form.querySelector("input[type='text']").value,
-email: form.querySelector("input[type='email']").value,
-message: form.querySelector("textarea").value
+name: document.querySelector("input[name='name']").value,
+email: document.querySelector("input[name='email']").value,
+message: document.querySelector("textarea[name='message']").value
 })
+.then(function(response){
 
-.then(function(){
 alert("Message Sent Successfully!");
-form.reset();
-})
 
-.catch(function(error){
+}, function(error){
+
 alert("Failed to send message");
-console.log(error);
-});
 
 });
+
+this.reset();
 
 });
